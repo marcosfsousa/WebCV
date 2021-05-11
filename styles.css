@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;    
+}
+
+@media screen and (max-width: 768px){
+    div.wrapper {
+        display: grid;
+        grid-template-columns: [c1] 1fr [c2] 1fr;
+        grid-template-rows: [r1] 100px [r2] 1fr [r3] 1fr [r4] 100px;                
+    }
+
+    div.main-content {
+        grid-column: c1;
+        grid-row-start: r2 / r4;
+    }
+
+    div.text-education {
+        grid-column: c2;
+        grid-row: r2 / r3;
+    }
+
+    div.text-experience {
+        grid-column: c2;
+        grid-row: r3 / r4;
+    }
+
+    div.footer-content {
+        grid-column: c1;
+        grid-row: r4;
+    }
+}
