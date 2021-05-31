@@ -11,7 +11,7 @@
     <div class="heading">
         Contact Form
     </div>
-    <form method="GET">        
+    <form>        
         <div class="pInfo">
             <div class="form-header">
                 <p class="status">Status: Open</p>
@@ -19,9 +19,9 @@
             </div>
             <div class="first-row">
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" pattern="[^a-zA-Z\x20]" required>
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]" required>
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" pattern="[^a-zA-Z\x20]" minlength="2" maxlength="15" required>
+                <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z\x20]" minlength="2" maxlength="15" required>
             </div>
             <div class="second-row">
                 <label for="dateofbirth">Date of Birth</label>
