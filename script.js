@@ -12,3 +12,10 @@
 // });
 
 
+// Opening Form in a new window with set size 
+
+// let linkForm = document.querySelector('.link-form');
+
+// linkForm.addEventListener('onclick', (event) => {
+//     window.open(url("/form/form.html"), 'Contact Me', 'width=600,height=400');
+// });

@@ -19,15 +19,15 @@
             </div>
             <div class="first-row">
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]" required>
+                <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,}" required>
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" pattern="[a-zA-Z\x20]" minlength="2" maxlength="15" required>
+                <input type="text" name="lastName" id="lastName" minlength="2" maxlength="15">
             </div>
             <div class="second-row">
                 <label for="dateofbirth">Date of Birth</label>
                 <input type="date" name="dateofbirth" id="dob" pattern="^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[0-1])\/(1900|19\d{2}|200[0-3])$" placeholder="DD.MM.YYYY" required>
                 <label for="telephone">Telephone </label>
-                <input type="number" name="telephone" id="telephone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                <input type="number" name="telephone" id="telephone" pattern="[0-9]{12}" required>
             </div>
             <div class="third-row">
                 <label for="email">Email</label>
