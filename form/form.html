@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="form-styles.css">
+    <script src="form_script.js" defer></script>
 </head>
 <body>
     <div class="heading">
         Contact Form
     </div>
-    <form>        
+    <form method="GET" >         
         <div class="pInfo">
             <div class="form-header">
                 <p class="status">Status: Open</p>
@@ -25,13 +26,13 @@
             </div>
             <div class="second-row">
                 <label for="dateofbirth">Date of Birth</label>
-                <input type="date" name="dateofbirth" id="dob" pattern="^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[0-1])\/(1900|19\d{2}|200[0-3])$" placeholder="DD.MM.YYYY" required>
+                <input type="date" name="dateofbirth" id="dob" min="1899-01-01" placeholder="DD.MM.YYYY" required>
                 <label for="telephone">Telephone </label>
-                <input type="number" name="telephone" id="telephone" pattern="[0-9]{12}" required>
+                <input type="tel" name="telephone" id="telephone" pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})" min="1" placeholder="(+00) 123-456-7890" required>
             </div>
             <div class="third-row">
                 <label for="email">Email</label>
-                <input type="text" name="email" id="email" pattern="[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$" required>                
+                <input type="text" name="email" id="email" pattern="[a-z0-9]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@email.com" required>                
             </div>
             <div class="fourth-row">
                 <label for="about">About you (max 200 characters)</label>
@@ -47,7 +48,7 @@
         </div>
     </div>            
         <div class="button-container">
-            <input type="submit" id="btn-submit" value="Send!">
+            <input type="button" id="btn-submit" onclick="statusApproved()" value="Send!">
         </div>  
     </form>
     <div class="footer">

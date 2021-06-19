@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my life!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Online Resume</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
@@ -16,16 +16,27 @@
         
 </head>
 <body>    
-    <div class="wrapper bg-img">
-        <img src="images/background_original_edited.jpg" alt="bckgorig">   
-        <header class="hero-wrapper">
+    <input name="dropdown" type="checkbox" class="menu-btn">    
+    <img src="images/bars-solid.svg" alt="bars-logo" class="img-bars" id="hide-desktop-tablet">
+    <nav id="nav" class="nav-container">
+        <ul>
+            <li class="menu">
+                <p><a href="#portfolio" >Portfolio</a></p>
+                <p><a href="#main-content">About me</a></p>
+                <p><a href="#footer">Social</a></p>
+                <p><a href="form/form.html" target="_blank">Contact Me</a></p>                        
+            </li>
+        </ul>
+    </nav>       
+    <div class="wrapper">
+        <header class="hero-wrapper" id="hero-wrapper">
             <div class="hero-content">
-                <h1>Welcome to my life's journey!</h1>
-                <p>Hi! I'm Marcos and I made this website<br>to show you a bit where I have <span class="text-accent">been</span> and<br> what I have&nbsp;<span class="text-accent">learned</span>  over the years.</p>
+                <h1>Hi! I'm Marcos</h1>
+                <p>Welcome to my life's journey!<br>I made this website to show where I have <span class="text-accent">been</span><br> and what I have&nbsp;<span class="text-accent">learned</span>  over the years.</p>
             </div>
         </header>
-        <section class="main-content">
-            <!-- <div class="horiz-line"></div>             -->
+        <section id="main-content" class="main-content background-image">
+            <div></div>
             <div class="text-education">
                 <ul>
                     <li>
@@ -50,22 +61,37 @@
                     <li>Movie Theater Employee | <span class="soft-dates">Mar 2008 - Aug 2008</span><br><span class="soft-text">ZON Lusomundo Almada Fórum - Portugal</span></li>
                 </ul>
             </div>
-            <footer class="footer-content">
-                <ul class="footer-list">
-                    <li>
-                        <a href="https://www.linkedin.com/in/themarcossousa/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="resources/CV_Marcos_Sousa_EN.pdf" download><i class="fa fa-download" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="form/form.html" class="link-form" target="_blank"><i class="fa fa-envelope-square" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            <p class="hide-desktop">For optimal user experience watch in resolution bigger than 1024x768 pixels.</p>
-            </footer>
         </section>
+        <aside class="portfolio-container">
+            
+                <div class="portfolio-card">
+                    <h2 id="portfolio" class="portfolio-heading">Portfolio</h2>
+                    <img class="portfolio-img" src="images/portfolio_img.jpg" alt="preview_resume">
+                    <p class="portfolio-para">Online Resume</p>
+                </div>    
+        </aside>
+        <footer id="footer" class="footer-content">
+            <ul class="footer-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/themarcossousa/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="resources/CV_Marcos_Sousa_EN.pdf" download><i class="fa fa-download" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                    <a href="form/form.html" class="link-form" target="_blank"><i class="fa fa-envelope-square" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/marcosfsousa" class="link-form" target="_blank"><i class="fa-solid fa-cat"></i></a>
+                </li>                
+                <li>
+                    <a href="#nav" class="link-form" class="top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+                </li>
+                
+            </ul>
+        <p class="hide-desktop">For optimal user experience watch in resolution bigger than 1024x768 pixels.</p>
+        </footer>
     </div>        
 </body>
 </html>
