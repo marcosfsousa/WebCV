@@ -18,12 +18,20 @@ document.getElementById("dob").setAttribute("max", today);
 
 // Confirmation Message after form submission // 
 
-function statusApproved() {
-    // event.preventDefault();
-
+function statusApproved(event) {
+    
     const status = document.querySelector(".status");    
-    status.textContent = "Status: Approved";
-
-  
+    const btnText = document.getElementById("btn-submit");
+    
+    
+    event.preventDefault();
+    
+    status.textContent = " Approved";
+    btnText.value = "✅";
+    status.classList.toggle("after-approved");
+    
     
 }
+
+
+

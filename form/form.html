@@ -12,10 +12,10 @@
     <div class="heading">
         Contact Form
     </div>
-    <form method="GET" >         
+    <form action="" onsubmit="statusApproved(event)">         
         <div class="pInfo">
             <div class="form-header">
-                <p class="status">Status: Open</p>
+                <p>Status: <span class="status">Open</span></p>
                 <p>Application</p>
             </div>
             <div class="first-row">
@@ -48,7 +48,7 @@
         </div>
     </div>            
         <div class="button-container">
-            <input type="button" id="btn-submit" onclick="statusApproved()" value="Send!">
+            <input type="submit" id="btn-submit" value="Send!">
         </div>  
     </form>
     <div class="footer">
