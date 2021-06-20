@@ -6,6 +6,3 @@ This is my Final Project for the Front End Development Spring Course in ReDI Mun
 The website is a interactive resume built with HTML, CSS and JavaScript.
 
 
-// Resolver links footer
-// Dar um toque ao formulario 
-// 

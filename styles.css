@@ -46,7 +46,7 @@ input {
 
 nav {
     position: absolute;
-    background-color: teal;
+    background-color: #6b90a5;
     top: 0;
     left: 0;
     width: 0;
@@ -129,6 +129,18 @@ input.menu-btn:checked ~ nav a {
     font-size: 0.85em;
     font-weight: 500;
 }
+
+.arrow-up {
+    font-size: 1.55em;
+    color: white;
+    
+}
+
+.top-text{
+    font-size: 0.5em;
+    color: white;
+}
+
 
             /* Main Content  */
 
@@ -231,13 +243,13 @@ input.menu-btn:checked ~ nav a {
 
         /* Footer  */
 
-.footer-content {
-    font-size: 1.25ch;
+.footer-content {    
     display: flex;
     flex-direction: column;    
     justify-content: flex-end;            
-    height: 100px;
+    height: 200px;
     background-color: #272643;
+    margin-top: 20px;
 
 }
 
@@ -255,17 +267,46 @@ input.menu-btn:checked ~ nav a {
     font-size: 18px;
 }
 
+.footer-list li a {
+    text-decoration: none;
+}
+
+.footer-list ul {
+    width: 100%;
+}
+
+.top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-end;
+    position: relative;
+    bottom: 33px;
+    margin-left: auto;
+    margin-right: 15px;     
+}
+
+.top-container a {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 1.125em;
+    color: white;
+
+}
+
     /* Footer Links  */
 
 .fa, .fa-solid {    
     padding: 10 0 0 10px;
-    font-size: 35px;    
+    font-size: 30px;    
     text-align: center;
     text-decoration: none;
   }
 
 .fa-linkedin-square, .fa-download, .fa-envelope-square, .fa-cat, .fa-arrow-up {    
-    width: 35px;
+    width: 45px;
     border-radius: 50%;
     color: #ffffff;
 }
@@ -548,8 +589,27 @@ input.menu-btn:checked ~ nav a {
         text-align: center;
     }
 
+    .fa, .fa-solid {    
+        
+        font-size: 34px;    
+        
+      }
+    
+    .fa-linkedin-square, .fa-download, .fa-envelope-square, .fa-cat, .fa-arrow-up {    
+        width: 35px;
+        
+    }
+
+    
+
     .hide-desktop {
         display: none;
+    }
+
+    .copyright {
+        margin-bottom: 0;
+        font-size: 0.75em;
+            
     }
 
 }
