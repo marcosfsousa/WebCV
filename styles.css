@@ -5,10 +5,15 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     height: auto;
     padding: 0;
-    margin: 0;     
+    margin: 0;
+    position: relative;     
 }
 
 ul li {
@@ -68,7 +73,7 @@ li.menu a {
 }
 
 li.menu a:hover {
-    font-size: 1.15em;
+    font-size: 1.05em;
     border-bottom: 1px solid black
 }
 
@@ -90,7 +95,8 @@ input.menu-btn:checked ~ nav a {
 .hero-wrapper {    
     background: linear-gradient(181deg, #e28e0fd9, #a6a6a6);
     padding: 20px 20px;    
-    text-align: center;    
+    text-align: center;
+    width: fit-content;    
 }
 
 .hero-content {
@@ -101,7 +107,15 @@ input.menu-btn:checked ~ nav a {
 
 .hero-content h1 {
     font-size: 1.3em;
-    padding: 30px 20px;
+    padding: 30px 10px;
+}
+
+.hero-content h3 {
+    font-size: 0.9em;
+    font-weight: 100;
+    padding-bottom: 20px;
+    width: fit-content;
+    margin: auto;
 }
 
 .hero-content p {
@@ -146,9 +160,11 @@ input.menu-btn:checked ~ nav a {
 
 .main-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;    
+    gap: 5px;
     padding-bottom: 20px;
+    font-size: 1em;
+    width: 375px;
 }
 
 .background-image {
@@ -160,12 +176,11 @@ input.menu-btn:checked ~ nav a {
             /* Cards */
 
 .text-education {
-    margin-top: 30px;
+    margin: 30px 5px 5px;
     padding: 10px 10px;
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2);
     text-align: center;
-    width: 90%;
-    min-width: 510px;
+    width: 360px;    
     background-color: #d0a429a6;
 }   
 
@@ -187,11 +202,9 @@ input.menu-btn:checked ~ nav a {
     margin-top: 30px;
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.14) , 0px 3px 1px -2px rgba(0,0,0,0.12) , 0px 1px 5px 0px rgba(0,0,0,0.2);
     padding: 10px 10px;
-    margin: 10px 10px;
-    text-align: center;
-    width: 90%;
-    min-width: 510px;
-    background-color: #d0a429a6;     
+    margin: 10px 5px;
+    width: 360px;
+    background-color: #d0a429a6;   
     
 }
 
@@ -217,40 +230,90 @@ input.menu-btn:checked ~ nav a {
         /* Portfolio */
         
 .portfolio-container {
-    background: linear-gradient(0deg, #e28e0fd9 10%, #b3b5b4);   
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 50px;
-}
-
-.portfolio-heading {
+    background: linear-gradient(0deg, #e28e0fd9 10%, #b3b5b4);
     font-family: 'Open Sans', sans-serif;
-    margin-bottom: 40px;
+    padding: 15px 0px;
 }
 
-.portfolio-img {
-    width: 200px;
-    height: 300px;
-    box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.2);
+.portfolio-card {
+    align-self: center;
 }
 
-.portfolio-para {
-    font-family: sans-serif;
-    font-size: 1.125em;
-    text-align: center;
+.portfolio-heading {    
+    margin: 0px 0px 40px 20px;
+    font-size: 2em;
+    
 }
+
+.sub-title {    
+    font-size: 1.4em;
+    padding: 0px 0px 30px 20px;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-ping, .img-column, .img-faq {
+    width: 315px;
+    height: 315px;
+    padding: 15px 0px;
+   
+}
+
+.ping-box, .column-box, .faq-box {
+    position: relative;
+}
+
+.ping-box:hover, .column-box:hover, .faq-box:hover {
+    opacity: 0.5;    
+}
+
+.link-live {
+    position: absolute;
+    top: 170px;
+    left: 107px;
+    font-size: 20px;
+    background-color: blue;
+    padding: 13px 34px;
+    text-decoration: none;
+    border-radius: 12px;
+    color: white;
+    
+}
+
+.link-code {
+    position: absolute;
+    top: 100px;
+    left: 108px;
+    font-size: 20px;
+    background-color: red;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 12px;
+    color: white;
+}
+
+.link-code:hover, .link-live:hover {
+    cursor: pointer;
+    font-size: 1.15em;
+
+}
+
 
         /* Footer  */
 
 .footer-content {    
     display: flex;
-    flex-direction: column;    
-    justify-content: flex-end;            
+    flex-direction: column;
+    justify-content: flex-end;
     height: 200px;
     background-color: #272643;
-    margin-top: 20px;
-
+    margin-top: 0px;
+    width: 375px;
+    
 }
 
 .footer-list {
@@ -283,7 +346,8 @@ input.menu-btn:checked ~ nav a {
     position: relative;
     bottom: 33px;
     margin-left: auto;
-    margin-right: 15px;     
+    margin-right: 15px;
+    margin-top: -30px;     
 }
 
 .top-container a {
@@ -313,6 +377,7 @@ input.menu-btn:checked ~ nav a {
 
 .footer-content p {
     align-self: center;
+    text-align: center;
     color: white;
 }
 
@@ -387,6 +452,7 @@ input.menu-btn:checked ~ nav a {
     };
 
     .hero-wrapper {
+        width: unset;
         margin-top: 50px;
     }
 
@@ -445,6 +511,7 @@ input.menu-btn:checked ~ nav a {
         align-items: center;  
         grid-column: c1 / c3;
         grid-row: r1 / r2;
+        width: unset;
     }
 
     .hero-content {
@@ -461,6 +528,7 @@ input.menu-btn:checked ~ nav a {
         grid-template-columns: [c1] 1fr [c2] 1fr [c3];
         grid-auto-rows: 425px; 
         grid-gap: 20px;
+        width: unset;
         
     }
 
@@ -503,6 +571,7 @@ input.menu-btn:checked ~ nav a {
         height: fit-content;        
         margin-top: 50px;
         background-color: #d0a429a6;
+        width: unset;
     }
 
     .text-experience {
@@ -514,6 +583,7 @@ input.menu-btn:checked ~ nav a {
         align-self: center;
         height: fit-content;
         max-width: 760px;  /* fixed for now */
+        width: unset;
     }
     
     .text-education li:first-child, .text-experience li:first-child {            
@@ -551,20 +621,13 @@ input.menu-btn:checked ~ nav a {
     .portfolio-heading {        
         font-family: 'Open Sans', sans-serif;
         font-size: 2em;
-        margin-bottom: 50px;
+        margin: 0px 0px 50px 0px;
         
     }
 
-    .portfolio-img {
-        width: 350px;
-        height: 400px;
-        box-shadow: 0px 24px 38px 3px rgba(0,0,0,0.14) , 0px 9px 46px 8px rgba(0,0,0,0.12) , 0px 11px 15px -7px rgba(0,0,0,0.2); 
-        
-    }
-
-    .portfolio-para {
-        font-size: 1.35em;
-        text-align: center;
+    .img-container {
+        flex-direction: row;
+        gap: 100px;
     }
     
                     /* Footer */
@@ -576,7 +639,8 @@ input.menu-btn:checked ~ nav a {
         grid-row: 4 / 5;
         justify-content: center;                                  
         max-height: max-content;        
-        margin-top: 0;         
+        margin-top: 0;
+        width: unset;         
             
     }
 
@@ -587,6 +651,7 @@ input.menu-btn:checked ~ nav a {
     
     .footer-content p {        
         text-align: center;
+
     }
 
     .fa, .fa-solid {    
