@@ -164,7 +164,7 @@ input.menu-btn:checked ~ nav a {
     gap: 5px;
     padding-bottom: 20px;
     font-size: 1em;
-    width: 375px;
+    width: auto;
 }
 
 .background-image {
