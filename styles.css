@@ -5,9 +5,7 @@
     scroll-behavior: smooth;
 }
 
-html, body {
-    overflow-x: hidden;
-}
+
 
 body {
     height: auto;
@@ -615,6 +613,7 @@ input.menu-btn:checked ~ nav a {
         position: relative;
         left: 10vw;
         top: 35px;
+        max-width: fit-content;
         
     }
 
